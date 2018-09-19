@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "/mnt/data/Dev/Android/Projects/XyzReader/XYZReader/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/home/inok/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/e94fa342a83b38e225714c064be651f1/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                },
+                {
+                    "source": "/mnt/data/Dev/Android/Projects/XyzReader/XYZReader/src/main/res/values-land/macro_layout.xml",
+                    "from": {
+                        "startLines": "3,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "88,36",
+                        "endColumns": "57,51",
+                        "endOffsets": "141,83"
+                    },
+                    "to": {
+                        "startLines": "6,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "328,386",
+                        "endColumns": "57,51",
+                        "endOffsets": "381,433"
+                    }
+                }
+            ]
+        }
+    ]
+}
