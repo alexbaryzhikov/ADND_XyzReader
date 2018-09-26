@@ -38,7 +38,7 @@ import java.util.HashMap;
  * thread safe.
  */
 @SuppressWarnings({"unused", "WeakerAccess"})
-public class SelectionBuilder {
+public final class SelectionBuilder {
 
     private String mTable = null;
     private HashMap<String, String> mProjectionMap;

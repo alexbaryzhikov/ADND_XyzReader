@@ -13,18 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.example.xyzreader.ui;
 
 import android.content.Context;
-import android.os.Parcelable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.widget.ScrollView;
 
-/**
- * A custom ScrollView that can accept a scroll listener.
- */
+/** A custom ScrollView that can accept a scroll listener. */
 public class ObservableScrollView extends ScrollView {
     private Callbacks mCallbacks;
 
@@ -59,7 +54,7 @@ public class ObservableScrollView extends ScrollView {
         mCallbacks = listener;
     }
 
-    public static interface Callbacks {
-        public void onScrollChanged();
+    public interface Callbacks {
+        void onScrollChanged();
     }
 }

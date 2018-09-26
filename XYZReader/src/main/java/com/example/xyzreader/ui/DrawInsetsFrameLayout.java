@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.example.xyzreader.ui;
 
 import android.content.Context;
@@ -28,7 +27,7 @@ import android.widget.FrameLayout;
 
 import com.example.xyzreader.R;
 
-
+@SuppressWarnings("unused")
 public class DrawInsetsFrameLayout extends FrameLayout {
     private Drawable mInsetBackground;
     private Drawable mTopInsetBackground;
@@ -103,16 +102,18 @@ public class DrawInsetsFrameLayout extends FrameLayout {
     @Override
     public WindowInsets onApplyWindowInsets(WindowInsets insets) {
         insets = super.onApplyWindowInsets(insets);
-        mInsets = new Rect(
-                insets.getSystemWindowInsetLeft(),
-                insets.getSystemWindowInsetTop(),
-                insets.getSystemWindowInsetRight(),
-                insets.getSystemWindowInsetBottom());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
+            mInsets = new Rect(
+                    insets.getSystemWindowInsetLeft(),
+                    insets.getSystemWindowInsetTop(),
+                    insets.getSystemWindowInsetRight(),
+                    insets.getSystemWindowInsetBottom());
+            if (mOnInsetsCallback != null) {
+                mOnInsetsCallback.onInsetsChanged(mInsets);
+            }
+        }
         setWillNotDraw(false);
         postInvalidateOnAnimation();
-        if (mOnInsetsCallback != null) {
-            mOnInsetsCallback.onInsetsChanged(mInsets);
-        }
         return insets;
     }
 
@@ -153,7 +154,7 @@ public class DrawInsetsFrameLayout extends FrameLayout {
         }
     }
 
-    public static interface OnInsetsCallback {
-        public void onInsetsChanged(Rect insets);
+    public interface OnInsetsCallback {
+        void onInsetsChanged(Rect insets);
     }
 }
