@@ -22,8 +22,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="@null"
-                android:scaleType="centerCrop"
-                android:src="@drawable/galaxy_resize"
+                android:scaleType="fitCenter"
+                android:src="@drawable/skull_flat"
                 app:layout_collapseMode="parallax" />
 
             <androidx.appcompat.widget.Toolbar
