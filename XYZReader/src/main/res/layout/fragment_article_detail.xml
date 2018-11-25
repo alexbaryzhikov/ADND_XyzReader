@@ -28,7 +28,7 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="112dp"
+                    android:layout_height="@dimen/detail_photo_height"
                     android:background="@drawable/photo_background_protection" />
 
             </FrameLayout>
@@ -36,8 +36,7 @@
             <com.example.xyzreader.ui.MaxWidthLinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/detail_card_top_margin"
+                android:layout_marginTop="@dimen/detail_photo_height"
                 android:background="@color/colorBackground"
                 android:elevation="2dp"
                 android:maxWidth="@dimen/detail_card_max_width"
@@ -94,7 +93,9 @@
                     tools:text="Article body" />
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
+
         </FrameLayout>
+
     </com.example.xyzreader.ui.ObservableScrollView>
 
     <ImageButton
